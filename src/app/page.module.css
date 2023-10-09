@@ -8,8 +8,8 @@
 }
 
 .description {
-  display: inherit;
-  justify-content: inherit;
+  display: flex;
+  justify-content: center;
   align-items: inherit;
   font-size: 0.85rem;
   max-width: var(--max-width);
@@ -37,6 +37,46 @@
 .code {
   font-weight: 700;
   font-family: var(--font-mono);
+}
+
+.bottomBar {
+  margin-top: 1rem;
+  gap: 1.2rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.studentInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.rollNo {
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+.bTitle {
+  /* opacity: 0.8; */
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bSubTitle {
+  opacity: 0.6;
 }
 
 .grid {
@@ -97,7 +137,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
