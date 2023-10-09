@@ -1,0 +1,49 @@
+body {
+    background: black;
+  }
+  .container {
+    --cols: 13;
+    --size: calc(100vw/var(--cols));
+    overflow: hidden;
+    animation: background 2s infinite;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), var(--size));
+    grid-auto-rows: var(--size);
+  }
+  
+  @keyframes background {
+    0% { background-color: #333;}
+    49% { background-color: #333;}  /* need sudden change of background color */
+    50% { background-color: #fff;}  /* so transition from 49% to 50 %*/
+    100% { background-color: #fff;}
+  }
+  
+  .item:nth-child(odd) {
+      background-color: #fff;
+      animation: spin 4s infinite linear, odd 2s infinite linear;
+  }
+  .item:nth-child(even) {
+      background-color: #333;
+      animation: spin 4s infinite linear, even 2s infinite linear;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); } 
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes odd {
+    0% { z-index: 1; }
+    100% { z-index: 0; }
+  }
+  
+  @keyframes even {
+    0% { z-index: 0; }
+    100% { z-index: 1; }
+  }
