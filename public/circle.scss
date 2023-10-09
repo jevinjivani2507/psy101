@@ -1,0 +1,66 @@
+// @import "compass/css3";
+
+$lines-nr: 8;
+$lines-angle: 360deg / $lines-nr / 2;
+$lines-animation-duration: 2s;
+$line-cnt: 300px;
+
+@mixin centerItem($w, $h: $w) {
+    width: $w;
+    height: $h;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    margin-left: -$w/2;
+    margin-top: -$h/2
+}
+
+.circles-ilusion {
+    @include centerItem($line-cnt);
+    z-index: 1;
+    background-color: #cc3025;
+    height: 320px;
+    width: 320px;
+    border-radius: 50%;
+
+    div {
+        @include centerItem(350px, 2px);
+        // background-color: #000;
+
+        &:before {
+            display: block;
+            content: '';
+
+            @include centerItem(20px);
+            background-color: white;
+            border-radius: 50%;
+
+            animation: circlesIlusion $lines-animation-duration ease-in-out infinite alternate;
+        }
+    }
+
+    @for $i from 1 through $lines-nr {
+        div:nth-child(#{$i}) {
+            &:before {
+                animation-delay: $lines-animation-duration / ($lines-nr - 0.5) * cos($lines-angle) * $i;
+                // why the fuck - 0.5 ?
+            }
+            transform: rotate($lines-angle * $i);
+        }
+    }
+    div:last-child:before {
+		background: yellow;
+    }
+}
+
+
+@keyframes circlesIlusion {
+    0% {
+        transform: translateX(-$line-cnt/2);
+    }
+    100% {
+        transform: translateX($line-cnt/2);
+    }
+}
