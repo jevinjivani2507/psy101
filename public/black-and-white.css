@@ -17,12 +17,12 @@ body {
   @keyframes background {
     0% { background-color: #333;}
     49% { background-color: #333;}  /* need sudden change of background color */
-    50% { background-color: #fff;}  /* so transition from 49% to 50 %*/
-    100% { background-color: #fff;}
+    50% { background-color: #9800d9;}  /* so transition from 49% to 50 %*/
+    100% { background-color: #9800d9;}
   }
   
   .item:nth-child(odd) {
-      background-color: #fff;
+      background-color: #9800d9;
       animation: spin 4s infinite linear, odd 2s infinite linear;
   }
   .item:nth-child(even) {

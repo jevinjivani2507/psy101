@@ -6,7 +6,7 @@
   body {
     margin: 0;
     height: 100vh;
-    background: #101010;
+    background: #333;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #9D2F27;
+    background: #9800d9;
   }
   
   .content:hover:before {

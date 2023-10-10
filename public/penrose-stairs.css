@@ -5,7 +5,8 @@
 body {
 	margin: 0;
 	height: 100vh;
-	background: linear-gradient(315deg, #0d0a0b 0%, #ff036c 74%);
+	/* background: linear-gradient(315deg, #0d0a0b 0%, #ff036c 74%); */
+	background: #333;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -54,7 +55,7 @@ body {
 .cube {
 	height: calc(var(--height) * 1vmin);
 	width: calc(var(--width) * 1vmin);
-	--hue: 169;
+	--hue: 285;
 	position: absolute;
 }
 
