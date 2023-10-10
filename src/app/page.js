@@ -9,21 +9,22 @@ export default function Home() {
       </div>
 
       <div className={styles.studentInfo}>
+        <h1>Group Information</h1>
         <div className={styles.info}>
-          <h2>Yagnesh Patel</h2>
-          <h2 className={styles.rollNo}>AU2040025</h2>
+          <h3>Yagnesh Patel</h3>
+          <h3 className={styles.rollNo}>AU2040025</h3>
         </div>
         <div className={styles.info}>
-          <h2>Jevin Jivani</h2>
-          <h2 className={styles.rollNo}>AU2040051</h2>
+          <h3>Jevin Jivani</h3>
+          <h3 className={styles.rollNo}>AU2040051</h3>
         </div>
         <div className={styles.info}>
-          <h2>Jatin Parmar</h2>
-          <h2 className={styles.rollNo}>AU2040118</h2>
+          <h3>Jatin Parmar</h3>
+          <h3 className={styles.rollNo}>AU2040118</h3>
         </div>
         <div className={styles.info}>
-          <h2>Yug Patel</h2>
-          <h2 className={styles.rollNo}>AU2040181</h2>
+          <h3>Yug Patel</h3>
+          <h3 className={styles.rollNo}>AU2040181</h3>
         </div>
       </div>
 
@@ -51,31 +52,35 @@ export default function Home() {
             <h2>
               Penrose Stairs <span>-&gt;</span>
             </h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a
-            href="/black-and-white.html"
-            className={styles.card}
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Black and White <span>-&gt;</span>
-            </h2>
             <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
+              Endless staircase challenges perception of depth and direction.
             </p>
           </a>
 
           <a
-            href="/circles.html"
+            href="/black-and-purple.html"
             className={styles.card}
             rel="noopener noreferrer"
           >
             <h2>
-              Circle <span>-&gt;</span>
+              Black and Purple <span>-&gt;</span>
             </h2>
-            <p>Explore the Next.js 13 playground.</p>
+            <p>
+              Can't distinguish between black and purple? Try this illusion.
+            </p>
+          </a>
+
+          <a
+            href="/cycloid.html"
+            className={styles.card}
+            rel="noopener noreferrer"
+          >
+            <h2>
+              Cycloid <span>-&gt;</span>
+            </h2>
+            <p>
+              Balls create a square pattern while appearing to move linearly
+            </p>
           </a>
 
           <a
@@ -87,9 +92,7 @@ export default function Home() {
             <h2>
               Optical <span>-&gt;</span>
             </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL with Vercel.
-            </p>
+            <p>Stream appears larger than it is due to perspective.</p>
           </a>
         </div>
       </div>
